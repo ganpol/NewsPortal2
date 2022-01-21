@@ -27,7 +27,7 @@ class Post(models.Model):
     time = models.DateTimeField(auto_now_add=True)
     news_text = models.TextField()
     news_rate = models.IntegerField(default=1)
-    news_title = models.CharField()
+    news_title = models.CharField(max_length=255)
     p_chose = models.CharField(max_length=1, choices=POSTS, default=article)
     rate = models.IntegerField(default=0)
 
